@@ -1,0 +1,77 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1788308386
+<< nwell >>
+rect -676 -276 676 276
+<< pwell >>
+rect -852 276 852 452
+rect -852 -276 -676 276
+rect 676 -276 852 276
+rect -852 -452 852 -276
+<< mvpsubdiff >>
+rect -820 348 820 420
+rect -820 304 -748 348
+rect -820 -304 -807 304
+rect -761 -304 -748 304
+rect 748 304 820 348
+rect -820 -348 -748 -304
+rect 748 -304 761 304
+rect 807 -304 820 304
+rect 748 -348 820 -304
+rect -820 -420 820 -348
+<< mvnsubdiff >>
+rect -644 231 644 244
+rect -644 185 -528 231
+rect 528 185 644 231
+rect -644 172 644 185
+rect -644 128 -572 172
+rect -644 -128 -631 128
+rect -585 -128 -572 128
+rect 572 128 644 172
+rect -644 -172 -572 -128
+rect 572 -128 585 128
+rect 631 -128 644 128
+rect 572 -172 644 -128
+rect -644 -185 644 -172
+rect -644 -231 -528 -185
+rect 528 -231 644 -185
+rect -644 -244 644 -231
+<< mvpsubdiffcont >>
+rect -807 -304 -761 304
+rect 761 -304 807 304
+<< mvnsubdiffcont >>
+rect -528 185 528 231
+rect -631 -128 -585 128
+rect 585 -128 631 128
+rect -528 -231 528 -185
+<< mvpdiode >>
+rect -500 87 500 100
+rect -500 -87 -487 87
+rect 487 -87 500 87
+rect -500 -100 500 -87
+<< mvpdiodec >>
+rect -487 -87 487 87
+<< metal1 >>
+rect -807 361 807 407
+rect -807 304 -761 361
+rect 761 304 807 361
+rect -631 185 -528 231
+rect 528 185 631 231
+rect -631 128 -585 185
+rect 585 128 631 185
+rect -498 -87 -487 87
+rect 487 -87 498 87
+rect -631 -185 -585 -128
+rect 585 -185 631 -128
+rect -631 -231 -528 -185
+rect 528 -231 631 -185
+rect -807 -361 -761 -304
+rect 761 -361 807 -304
+rect -807 -407 807 -361
+<< properties >>
+string FIXED_BBOX -608 -208 608 208
+string gencell diode_pd2nw_06v0
+string library gf180mcu
+string parameters w 5 l 1 area 5.0 peri 12.0 nx 1 ny 1 dummy 0 lmin 0.45 wmin 0.45 class diode elc 1 erc 1 etc 1 ebc 1 glc 1 grc 1 gtc 0 gbc 0 doverlap 0 full_metal 1 compatible {diode_pd2nw_03v3 diode_pd2nw_06v0}
+<< end >>

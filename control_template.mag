@@ -1,0 +1,124 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1786404897
+<< metal2 >>
+rect 0 323627 22 338083
+rect 0 295427 22 309883
+rect 0 281127 83 281203
+rect 0 269021 83 269097
+rect 0 268148 83 268224
+rect 0 252927 83 253003
+rect 0 240821 83 240897
+rect 0 239948 83 240024
+rect 0 224727 83 224803
+rect 0 212621 83 212697
+rect 0 211748 83 211824
+rect 0 196527 83 196603
+rect 0 184421 83 184497
+rect 0 183548 83 183624
+rect 0 168181 83 168257
+rect 0 168035 83 168111
+rect 0 167889 83 167965
+rect 0 156432 83 156508
+rect 0 156221 83 156297
+rect 0 155348 83 155424
+rect 0 154827 83 154903
+rect 0 139981 83 140057
+rect 0 139835 83 139911
+rect 0 139689 83 139765
+rect 0 128232 83 128308
+rect 0 128021 83 128097
+rect 0 127148 83 127224
+rect 0 126627 83 126703
+rect 0 100823 22 109687
+rect 0 83581 83 83657
+rect 0 83435 83 83511
+rect 0 83289 83 83365
+rect 0 71832 83 71908
+rect 0 71621 83 71697
+rect 0 70748 83 70824
+rect 0 70227 83 70303
+rect 0 41627 22 56083
+rect 0 13427 22 27883
+rect 148463 0 148516 349696
+<< labels >>
+flabel metal2 0 13427 22 27883 0 FreeSans 400 0 0 0 VSS
+port 1 nsew power bidirectional
+flabel metal2 0 41627 22 56083 0 FreeSans 400 0 0 0 VDD
+port 2 nsew power bidirectional
+flabel metal2 0 70227 22 70303 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 70748 22 70824 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 71621 22 71697 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 71832 22 71908 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 83289 22 83365 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 83435 22 83511 0 FreeSans 400 0 0 0 PWRENb
+port 5 nsew signal output
+flabel metal2 0 83581 22 83657 0 FreeSans 400 0 0 0 PU
+port 4 nsew signal output
+flabel metal2 0 100823 22 109687 0 FreeSans 400 0 0 0 PROG
+port 6 nsew signal bidirectional
+flabel metal2 0 126627 22 126703 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 127148 22 127224 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 128021 22 128097 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 128232 22 128308 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 139689 22 139765 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 139835 22 139911 0 FreeSans 400 0 0 0 DONEb
+port 7 nsew signal output
+flabel metal2 0 139981 22 140057 0 FreeSans 400 0 0 0 PU
+port 4 nsew signal output
+flabel metal2 0 154827 22 154903 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 155348 22 155424 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 156221 22 156297 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 156432 22 156508 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 167889 22 167965 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 168035 22 168111 0 FreeSans 400 0 0 0 CHRGb
+port 8 nsew signal output
+flabel metal2 0 168181 22 168257 0 FreeSans 400 0 0 0 PU
+port 4 nsew signal output
+flabel metal2 0 183548 22 183624 0 FreeSans 400 0 0 0 PU
+port 4 nsew signal output
+flabel metal2 0 184421 22 184497 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 196527 22 196603 0 FreeSans 400 0 0 0 CE
+port 9 nsew signal input
+flabel metal2 0 211748 22 211824 0 FreeSans 400 0 0 0 PU
+port 4 nsew signal output
+flabel metal2 0 212621 22 212697 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 224727 22 224803 0 FreeSans 400 0 0 0 LENb
+port 9 nsew signal input
+flabel metal2 0 239948 22 240024 0 FreeSans 400 0 0 0 PU
+port 4 nsew signal output
+flabel metal2 0 240821 22 240897 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 252927 22 253003 0 FreeSans 400 0 0 0 S1
+port 9 nsew signal input
+flabel metal2 0 268148 22 268224 0 FreeSans 400 0 0 0 PU
+port 4 nsew signal output
+flabel metal2 0 269021 22 269097 0 FreeSans 400 0 0 0 PD
+port 3 nsew signal output
+flabel metal2 0 281127 22 281203 0 FreeSans 400 0 0 0 S0
+port 9 nsew signal input
+flabel metal2 0 295427 22 309883 0 FreeSans 400 0 0 0 VSS
+port 1 nsew power bidirectional
+flabel metal2 0 323627 22 338083 0 FreeSans 400 0 0 0 VDD
+port 2 nsew power bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 148516 349696
+<< end >>

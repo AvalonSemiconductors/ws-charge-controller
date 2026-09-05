@@ -1,0 +1,34 @@
+* NGSPICE file created from nand.ext - technology: gf180mcuD
+
+.subckt nand_f VDD VSS A B Y
+X0 VDD B Y VDD pfet_06v0 ad=0.88p pd=4.88u as=0.88p ps=4.88u w=2u l=0.55u
+X1 a_1133_169# A Y VSS.t2 nfet_06v0 ad=1.96p pd=3.96u as=0.88p ps=4.88u w=2u l=0.7u
+X2 VSS.t1 B a_1133_169# VSS.t0 nfet_06v0 ad=0.88p pd=4.88u as=1.96p ps=3.96u w=2u l=0.7u
+X3 Y A VDD VDD pfet_06v0 ad=0.88p pd=4.88u as=0.88p ps=4.88u w=2u l=0.55u
+R0 VSS.n2 VSS.t0 1670.28
+R1 VSS.n3 VSS.n1 123.862
+R2 VSS.n2 VSS.t2 100.62
+R3 VSS.t0 VSS.n0 15.3821
+R4 VSS.n0 VSS.t1 0.0295354
+R5 VSS.n3 VSS.n0 52.7156
+R6 VSS VSS.t1 1.11677
+R7 VSS.n3 VSS.n2 1.0405
+R8 VSS VSS.n3 1.0405
+R9 VSS.t2 VSS.n1 1.0405
+R10 VSS.n1 VSS.t1 1.00079
+C0 a_1133_169# Y 0.0044f
+C1 VDD Y 1.28674f
+C2 A Y 0.62553f
+C3 B Y 0.05761f
+C4 a_1133_169# A 0.31791f
+C5 VDD A 0.40391f
+C6 B a_1133_169# 0.30358f
+C7 B VDD 0.40233f
+C8 B A 0.14049f
+C9 B VSS 1.1362f
+C10 Y VSS 0.72759f
+C11 A VSS 0.72431f
+C12 VDD VSS 4.56424f
+C13 a_1133_169# VSS 0.21995f
+.ends
+

@@ -1,0 +1,107 @@
+# Floorplanning
+FP_SIZING: absolute
+DIE_AREA: [0, 0, 3932, 2531]
+CORE_AREA: [442, 442, 3490, 2089]
+
+VERILOG_DEFINES: ["SLOT_1X0P5"]
+
+# Specify the pad instances for the padring
+PAD_SOUTH: [
+    "dummy_0",
+    "dummy_1",
+    "dummy_2",
+    "dummy_3",
+
+    "dvss_pads\\[0\\].pad",
+    "dvdd_pads\\[0\\].pad",
+
+    "bat\\[0\\].pad",
+    "bat\\[1\\].pad",
+    "bat\\[2\\].pad",
+    "bat\\[3\\].pad",
+    "bat\\[4\\].pad",
+    "bat\\[5\\].pad",
+    "bat\\[6\\].pad",
+    "bat\\[7\\].pad",
+    "bat\\[8\\].pad",
+    "bat\\[9\\].pad",
+    "bat\\[10\\].pad",
+    "bat\\[11\\].pad",
+
+    "dvss_pads\\[1\\].pad",
+    "dvdd_pads\\[1\\].pad",
+    
+    "dummy_4",
+    "dummy_5",
+    "dummy_6",
+    "dummy_7"
+]
+
+PAD_EAST: [
+    "dvss_pads\\[2\\].pad",
+    "dvdd_pads\\[2\\].pad",
+
+    "dummy_8",
+    "dummy_9",
+    "dummy_10",
+    "dummy_11",
+    "dummy_12",
+    "safe",
+    "s1p",
+    "s0p",
+
+    "dvss_pads\\[3\\].pad",
+    "dvdd_pads\\[3\\].pad"
+]
+
+PAD_NORTH: [
+    "dummy_13",
+    "dummy_14",
+    "dummy_15",
+    "dummy_16",
+    
+    "dvss_pads\\[5\\].pad",
+    "dvdd_pads\\[5\\].pad",
+
+    "bvdd\\[11\\].pad",
+    "bvdd\\[10\\].pad",
+    "bvdd\\[9\\].pad",
+    "bvdd\\[8\\].pad",
+    "bvdd\\[7\\].pad",
+    "bvdd\\[6\\].pad",
+    "bvdd\\[5\\].pad",
+    "bvdd\\[4\\].pad",
+    "bvdd\\[3\\].pad",
+    "bvdd\\[2\\].pad",
+    "bvdd\\[1\\].pad",
+    "bvdd\\[0\\].pad",
+
+    "dvss_pads\\[4\\].pad",
+    "dvdd_pads\\[4\\].pad",
+    
+    "dummy_17",
+    "dummy_18",
+    "dummy_19",
+    "dummy_20"
+]
+
+
+PAD_WEST: [
+    "vss_pads\\[0\\].pad",
+    "vdd_pads\\[0\\].pad",
+
+    "pwrenb",
+    "prog",
+    "done",
+    "chrg",
+    
+    "ce",
+    "lenb",
+    "s1",
+    "s0",
+    
+    "dvss_pads\\[6\\].pad",
+    "dvdd_pads\\[6\\].pad"
+]
+
+PAD_CFG: "dir::pad_cfg.tcl"

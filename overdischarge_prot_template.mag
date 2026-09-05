@@ -1,0 +1,54 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1787933279
+<< metal2 >>
+rect 0 112400 200 126856
+rect 0 84200 200 98656
+rect 0 69900 200 69976
+rect 0 57794 200 57870
+rect 0 56921 200 56997
+rect 0 41700 200 41776
+rect 0 29594 200 29670
+rect 0 28721 200 28797
+rect 0 13354 200 13430
+rect 0 13208 200 13284
+rect 0 13062 200 13138
+rect 0 1605 200 1681
+rect 0 1394 200 1470
+rect 0 521 200 597
+rect 0 0 200 76
+<< labels >>
+flabel metal2 0 112400 200 126856 0 FreeSans 800 0 0 0 VDDP
+port 1 nsew power bidirectional
+flabel metal2 0 84200 200 98656 0 FreeSans 800 0 0 0 VSSP
+port 2 nsew ground bidirectional
+flabel metal2 0 69900 200 69976 0 FreeSans 800 0 0 0 S0P
+port 3 nsew signal input
+flabel metal2 0 57794 200 57870 0 FreeSans 800 0 0 0 PD
+port 6 nsew signal output
+flabel metal2 0 56921 200 56997 0 FreeSans 800 0 0 0 PU
+port 7 nsew signal output
+flabel metal2 0 41700 200 41776 0 FreeSans 800 0 0 0 S1P
+port 4 nsew signal input
+flabel metal2 0 29594 200 29670 0 FreeSans 800 0 0 0 PD
+port 6 nsew signal output
+flabel metal2 0 28721 200 28797 0 FreeSans 800 0 0 0 PU
+port 7 nsew signal output
+flabel metal2 0 13354 200 13430 0 FreeSans 800 0 0 0 PU
+port 7 nsew signal output
+flabel metal2 0 13208 200 13284 0 FreeSans 800 0 0 0 SAFE
+port 5 nsew signal output
+flabel metal2 0 13062 200 13138 0 FreeSans 800 0 0 0 PU
+port 7 nsew signal output
+flabel metal2 0 1605 200 1681 0 FreeSans 800 0 0 0 PD
+port 6 nsew signal output
+flabel metal2 0 1394 200 1470 0 FreeSans 800 0 0 0 PD
+port 6 nsew signal output
+flabel metal2 0 521 200 597 0 FreeSans 800 0 0 0 PD
+port 6 nsew signal output
+flabel metal2 0 0 200 76 0 FreeSans 800 0 0 0 PD
+port 6 nsew signal output
+<< properties >>
+string FIXED_BBOX 0 0 200 126856
+<< end >>
