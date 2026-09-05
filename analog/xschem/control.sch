@@ -40,7 +40,6 @@ N 540 100 540 140 {lab=HALFBAT}
 N 520 30 520 170 {lab=VSS}
 N 540 60 540 100 {lab=HALFBAT}
 N 540 -10 540 -0 {lab=BAT}
-N 720 610 720 700 {lab=CHRGb}
 N 500 100 540 100 {lab=HALFBAT}
 N 1360 100 1370 100 {lab=VSS}
 N 1370 40 1370 100 {lab=VSS}
@@ -101,11 +100,9 @@ N 290 120 300 120 {lab=REFOUT}
 N 1160 730 1220 730 {lab=PROG}
 N 420 610 420 670 {lab=#net1}
 N 270 760 280 760 {lab=VSS}
-N 810 710 860 710 {lab=COMPOUT}
 N 770 110 810 110 {lab=COMPOUT}
 N 300 120 320 120 {lab=REFOUT}
 N 320 120 630 120 {lab=REFOUT}
-N 810 110 810 710 {lab=COMPOUT}
 N 540 -10 1420 -10 {lab=BAT}
 N 950 350 950 370 {lab=FILT}
 N 950 350 980 350 {lab=FILT}
@@ -194,6 +191,10 @@ N 1570 690 1740 690 {lab=#net11}
 N 1390 -10 1390 10 {lab=BAT}
 N 1680 130 1680 230 {lab=PWRENb}
 N 810 350 820 350 {lab=COMPOUT}
+N 810 110 810 350 {lab=COMPOUT}
+N 720 730 720 760 {lab=CHRGb}
+N 810 350 810 710 {lab=COMPOUT}
+N 810 710 860 710 {lab=COMPOUT}
 C {iopin.sym} -110 -10 2 0 {name=p1 lab=VDD}
 C {lab_pin.sym} -80 -10 2 0 {name=p2 sig_type=std_logic lab=VDD}
 C {iopin.sym} -110 20 2 0 {name=p3 lab=VSS}
@@ -202,7 +203,7 @@ C {ipin.sym} -40 100 0 0 {name=p5 lab=S0}
 C {ipin.sym} -40 120 0 0 {name=p6 lab=S1}
 C {ipin.sym} 1530 690 0 0 {name=p7 lab=LENb}
 C {ipin.sym} 50 570 0 0 {name=p8 lab=CE}
-C {opin.sym} 720 610 0 0 {name=p9 lab=CHRGb}
+C {opin.sym} 720 760 0 0 {name=p9 lab=CHRGb}
 C {opin.sym} 2200 380 0 0 {name=p10 lab=DONEb}
 C {iopin.sym} 1220 730 0 0 {name=p11 lab=PROG}
 C {opin.sym} 1680 130 0 0 {name=p12 lab=PWRENb}
@@ -277,14 +278,14 @@ C {lab_pin.sym} 670 40 1 0 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 670 180 3 0 {name=p24 sig_type=std_logic lab=VSS}
 C {symbols/ppolyf_u_1k_6p0.sym} 540 170 0 0 {name=R1
 W=1e-6
-L=8e-5
+L=4e-5
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
 C {lab_pin.sym} 540 200 3 0 {name=p25 sig_type=std_logic lab=VSS}
 C {symbols/ppolyf_u_1k_6p0.sym} 540 30 0 0 {name=R2
 W=1e-6
-L=8e-5
+L=4e-5
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
@@ -436,8 +437,6 @@ spiceprefix=X
 }
 C {lab_pin.sym} 860 690 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 810 110 2 0 {name=p28 sig_type=std_logic lab=COMPOUT}
-C {comparator.sym} 780 110 0 0 {name=x3}
-C {lab_pin.sym} 670 280 1 0 {name=p27 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 950 430 3 0 {name=p33 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 980 350 1 0 {name=p36 sig_type=std_logic lab=FILT}
 C {symbols/cap_mim_2f0fF.sym} 950 400 0 0 {name=C1
@@ -637,3 +636,4 @@ spiceprefix=X
 }
 C {lab_pin.sym} 1570 620 1 0 {name=p72 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1570 760 3 0 {name=p73 sig_type=std_logic lab=VSS}
+C {comparator.sym} 780 110 0 0 {name=x3}

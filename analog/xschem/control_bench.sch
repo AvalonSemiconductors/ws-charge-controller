@@ -124,7 +124,7 @@ C {vsource.sym} 190 130 0 0 {name=V1 value="5" savecurrent=false}
 C {gnd.sym} 190 180 0 0 {name=l52 lab=GND}
 C {gnd.sym} 210 -60 3 0 {name=l1 lab=GND}
 C {res.sym} -270 50 0 0 {name=R1
-value=7k
+value=10k
 footprint=1206
 device=resistor
 m=1}
@@ -154,7 +154,7 @@ write control_bench.raw
 C {devices/code_shown.sym} -1260 60 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.include /run/media/veracrypt1/gf180mcu-project-template/analog/xschem/extracted/power_fet_f.spice
+.include /run/media/veracrypt1/ws-charge-controller/analog/xschem/extracted/power_fet_f.spice
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical

@@ -102,20 +102,20 @@ C {lab_pin.sym} 580 20 1 0 {name=p15 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 580 160 2 0 {name=p16 sig_type=std_logic lab=VSS}
 C {symbols/ppolyf_u_1k_6p0.sym} 370 100 1 0 {name=R4
 W=1e-6
-L=5e-5
+L=5e-6
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
 C {lab_pin.sym} 450 -10 1 0 {name=p17 sig_type=std_logic lab=VDD}
 C {symbols/ppolyf_u_1k_6p0.sym} 580 220 1 0 {name=R5
 W=1e-6
-L=8.8e-5
+L=8.8e-6
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_1k_6p0.sym} 760 90 1 0 {name=R6
 W=1e-6
-L=6e-5
+L=6e-6
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
@@ -123,7 +123,7 @@ C {lab_pin.sym} 760 70 1 0 {name=p13 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 710 90 1 0 {name=p18 sig_type=std_logic lab=HALFWAY}
 C {symbols/ppolyf_u_1k_6p0.sym} 860 220 1 0 {name=R2
 W=1e-6
-L=8e-5
+L=8e-6
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
