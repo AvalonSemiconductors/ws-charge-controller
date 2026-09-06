@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1788308643
+timestamp 1788720993
 << nwell >>
 rect 885 3307 8149 4896
 << pwell >>
@@ -270,8 +270,8 @@ rect 885 3413 1033 3459
 rect 3249 3413 3409 3459
 rect 5625 3413 5785 3459
 rect 8001 3413 8149 3459
-rect 885 3308 8149 3413
-rect 885 3206 8149 3262
+rect 885 3321 8149 3413
+rect 885 3206 8149 3261
 rect 885 3160 1033 3206
 rect 3249 3160 3409 3206
 rect 5625 3160 8149 3206
@@ -506,6 +506,6 @@ flabel metal2 7165 3257 8149 3313 0 FreeSans 200 0 0 0 VREF
 port 3 nsew signal output
 flabel metal1 885 4805 8149 4896 0 FreeSans 400 0 0 0 VDD
 port 1 nsew power bidirectional abutment
-flabel metal1 884 1335 8149 1479 0 FreeSans 400 0 0 0  VSS
+flabel metal1 884 1335 8149 1479 0 FreeSans 400 0 0 0 VSS
 port 2 nsew ground bidirectional abutment
 << end >>

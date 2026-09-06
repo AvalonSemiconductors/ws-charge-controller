@@ -80,7 +80,7 @@ write overdischarge_prot_bench.raw
 C {devices/code_shown.sym} -1620 160 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.include /run/media/veracrypt1/gf180mcu-project-template/analog/xschem/extracted/trans_f.spice
+.include /run/media/veracrypt1/ws-charge-controller/analog/xschem/extracted/overdischarge_prot_f.spice
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
@@ -88,7 +88,6 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 "}
-C {overdischarge_prot.sym} -100 10 0 0 {name=x1}
 C {devices/launcher.sym} -495 335 0 0 {name=h1
 descr="Click left mouse button here with control key
 pressed to load/unload waveforms in graph."
@@ -101,3 +100,4 @@ C {gnd.sym} -360 150 0 0 {name=l2 lab=GND}
 C {gnd.sym} -290 0 1 0 {name=l1 lab=GND}
 C {lab_pin.sym} 70 -10 0 1 {name=p2 sig_type=std_logic lab=SAFE}
 C {lab_pin.sym} -370 -20 2 1 {name=p1 sig_type=std_logic lab=VDD}
+C {extracted/overdischarge_prot_f.sym} -100 10 0 0 {name=x1}
