@@ -22,9 +22,9 @@ N 240 -20 250 -20 {lab=DVDD}
 N 80 40 240 40 {lab=BAT}
 C {symbols/pfet_06v0.sym} 60 0 0 0 {name=M1
 L=2u
-W=467.2u
+W=46.72u
 nf=10
-m=792
+m=7920
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -39,9 +39,9 @@ C {iopin.sym} 80 50 1 0 {name=p2 lab=BAT}
 C {ipin.sym} 20 0 0 0 {name=p3 lab=GATE}
 C {symbols/pfet_06v0.sym} 220 10 0 0 {name=M2
 L=2u
-W=764.65u
+W=76.465u
 nf=10
-m=726
+m=7260
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"

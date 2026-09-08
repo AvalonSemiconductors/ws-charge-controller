@@ -20,8 +20,8 @@ y1=-1.5
 color=4
 node=i(v2)
 y2=0
-x1=0
-x2=8e-05}
+x1=4.4e-05
+x2=0.000124}
 B 2 830 -40 1420 420 {flags=graph
 ypos1=0
 ypos2=2
@@ -40,8 +40,8 @@ node="CHRGb
 DONEB
 BAT
 CAP"
-x1=0
-x2=8e-05}
+x1=4.4e-05
+x2=0.000124}
 B 2 -20 -660 570 -200 {flags=graph
 ypos1=0
 ypos2=2
@@ -57,10 +57,10 @@ y1=0
 y2=5
 color="6 8 7"
 node="GATE
-x1.HALFBAT
+x1.halfbat
 x1.refout"
-x1=0
-x2=8e-05}
+x1=4.4e-05
+x2=0.000124}
 B 2 -20 -1120 570 -660 {flags=graph
 ypos1=0
 ypos2=2
@@ -76,8 +76,25 @@ y1=-0.02
 color=4
 node=i(v1)
 y2=0
-x1=0
-x2=8e-05}
+x1=4.4e-05
+x2=0.000124}
+B 2 830 420 1420 880 {flags=graph
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+divx=5
+subdivx=1
+
+unitx=1
+dataset=-1
+y1=0
+y2=5
+color=12
+node=x1.compout
+x1=4.4e-05
+x2=0.000124}
 N 190 160 190 180 {lab=GND}
 N 170 -60 210 -60 {lab=GND}
 N 190 -80 190 100 {lab=#net1}
@@ -124,7 +141,7 @@ C {vsource.sym} 190 130 0 0 {name=V1 value="5" savecurrent=false}
 C {gnd.sym} 190 180 0 0 {name=l52 lab=GND}
 C {gnd.sym} 210 -60 3 0 {name=l1 lab=GND}
 C {res.sym} -270 50 0 0 {name=R1
-value=10k
+value=6k
 footprint=1206
 device=resistor
 m=1}
@@ -142,25 +159,28 @@ C {vsource.sym} 640 50 0 0 {name=V2 value="5" savecurrent=false}
 C {gnd.sym} 640 100 0 0 {name=l3 lab=GND}
 C {gnd.sym} 500 250 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} 370 100 2 0 {name=p8 sig_type=std_logic lab=BAT}
-C {devices/code_shown.sym} -940 -170 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -1100 -210 0 0 {name=NGSPICE only_toplevel=true
 value="
-.control
-save all
-tran 1n 100u
-remzerovec
-write control_bench.raw
-.endc
+.TRAN 1n 200u 0 10n
+.PRINT TRAN FORMAT=raw file=control_bench.raw v(*) i(*)
+.PREPROCESS REPLACEGROUND TRUE
+*.control
+*save all
+*tran 1n 100u
+*remzerovec
+*write control_bench.raw
+*.endc
 "}
-C {devices/code_shown.sym} -1260 60 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} -1520 60 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
+.include $::PDK_ROOT/gf180mcuD/libs.tech/xyce/design.xyce
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce res_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce diode_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce mimcap_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce cap_mim
 .include /run/media/veracrypt1/ws-charge-controller/analog/xschem/extracted/power_fet_f.spice
-.include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
-.lib $::180MCU_MODELS/sm141064.ngspice res_typical
-.lib $::180MCU_MODELS/sm141064.ngspice diode_typical
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
-.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 "}
 C {devices/launcher.sym} -355 265 0 0 {name=h1
 descr="Click left mouse button here with control key

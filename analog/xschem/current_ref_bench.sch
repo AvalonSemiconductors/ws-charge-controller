@@ -74,7 +74,6 @@ N 30 30 30 80 {lab=DISABLE}
 N 30 140 30 160 {lab=GND}
 N 600 10 600 210 {lab=CONTROL}
 N 10 -10 30 -10 {lab=GND}
-N 500 10 500 210 {lab=CONTROL}
 N 30 -10 30 10 {lab=GND}
 C {devices/code_shown.sym} -850 -170 0 0 {name=NGSPICE only_toplevel=true
 value="
