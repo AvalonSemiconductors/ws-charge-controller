@@ -88,7 +88,7 @@ write refgens_bench.raw
 C {devices/code_shown.sym} -1000 170 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.include /run/media/veracrypt1/gf180mcu-project-template/analog/xschem/extracted/refgens_f.spice
+.include /run/media/veracrypt1/ws-charge-controller/analog/xschem/extracted/refgens_f.spice
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical

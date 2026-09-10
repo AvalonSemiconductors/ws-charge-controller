@@ -92,7 +92,7 @@ dataset=-1
 y1=0
 y2=5
 color=12
-node=x1.compout
+node=x1.opout
 x1=4.4e-05
 x2=0.000124}
 N 190 160 190 180 {lab=GND}
@@ -161,7 +161,7 @@ C {gnd.sym} 500 250 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} 370 100 2 0 {name=p8 sig_type=std_logic lab=BAT}
 C {devices/code_shown.sym} -1100 -210 0 0 {name=NGSPICE only_toplevel=true
 value="
-.TRAN 1n 200u 0 10n
+.TRAN 1n 100u 0 10n
 .PRINT TRAN FORMAT=raw file=control_bench.raw v(*) i(*)
 .PREPROCESS REPLACEGROUND TRUE
 *.control

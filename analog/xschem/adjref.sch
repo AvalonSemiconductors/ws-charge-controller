@@ -56,9 +56,9 @@ r_l=2u
 m=1}
 C {lab_pin.sym} -130 20 0 0 {name=p5 sig_type=std_logic lab=VREF}
 C {lab_pin.sym} 140 30 0 0 {name=p6 sig_type=std_logic lab=COMPO}
-C {opamp_smol.sym} 110 0 0 0 {name=x1}
 C {symbols/diode_nd2ps_06v0.sym} 350 40 2 0 {name=D1
 model=diode_nd2ps_06v0
 r_w=2u
 r_l=2u
 m=1}
+C {opamp_smol.sym} 110 0 0 0 {name=x1}

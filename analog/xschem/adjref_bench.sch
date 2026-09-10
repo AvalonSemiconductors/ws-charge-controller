@@ -95,7 +95,7 @@ write adjref_bench.raw
 C {devices/code_shown.sym} -1340 130 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.include /run/media/veracrypt1/gf180mcu-project-template/analog/xschem/extracted/adjref_f.spice
+.include /run/media/veracrypt1/ws-charge-controller/analog/xschem/extracted/adjref_f.spice
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
@@ -103,4 +103,4 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 "}
-C {extracted/adjref_f.sym} 50 0 0 0 {name=x1}
+C {adjref.sym} 50 0 0 0 {name=x1}

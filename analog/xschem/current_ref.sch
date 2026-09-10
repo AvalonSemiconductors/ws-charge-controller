@@ -66,7 +66,6 @@ C {lab_pin.sym} -460 120 3 0 {name=p7 sig_type=std_logic lab=VSS}
 C {ipin.sym} 190 450 0 0 {name=p8 lab=DISABLE}
 C {lab_pin.sym} -210 50 3 0 {name=p9 sig_type=std_logic lab=MINUS}
 C {lab_pin.sym} -210 30 1 0 {name=p10 sig_type=std_logic lab=PLUS}
-C {opamp_medium.sym} 550 110 0 0 {name=x3}
 C {lab_pin.sym} 440 40 1 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 440 180 2 0 {name=p12 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 160 100 1 0 {name=p19 sig_type=std_logic lab=CURREF}
@@ -76,7 +75,6 @@ model=diode_pd2nw_06v0
 r_w=4u
 r_l=1u
 m=1}
-C {opamp_medium.sym} -20 40 0 0 {name=x1}
 C {lab_pin.sym} 280 560 3 0 {name=p21 sig_type=std_logic lab=VSS}
 C {symbols/cap_mim_2f0fF.sym} 280 530 0 0 {name=C1
 W=3e-6
@@ -111,3 +109,5 @@ L=1e-5
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
+C {opamp_medium.sym} -20 40 0 0 {name=x1}
+C {opamp_medium.sym} 550 110 0 0 {name=x3}

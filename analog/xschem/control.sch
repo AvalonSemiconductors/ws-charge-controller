@@ -100,17 +100,15 @@ N 290 120 300 120 {lab=REFOUT}
 N 1160 730 1220 730 {lab=PROG}
 N 420 610 420 670 {lab=DISABLEn}
 N 270 760 280 760 {lab=VSS}
-N 770 110 810 110 {lab=COMPOUT}
+N 770 110 810 110 {lab=OPOUT}
 N 300 120 320 120 {lab=REFOUT}
 N 540 -10 1420 -10 {lab=BAT}
-N 950 350 950 370 {lab=FILT}
-N 950 350 980 350 {lab=FILT}
-N 940 350 950 350 {lab=FILT}
-N 880 350 880 470 {lab=#net5}
-N 880 530 900 530 {lab=VSS}
-N 900 500 900 530 {lab=VSS}
+N 990 350 990 370 {lab=FILT}
+N 980 350 990 350 {lab=FILT}
+N 920 350 920 470 {lab=#net5}
+N 920 530 940 530 {lab=VSS}
+N 940 500 940 530 {lab=VSS}
 N 1260 360 1290 360 {lab=TRIG}
-N 980 350 1120 350 {lab=FILT}
 N 1040 520 1060 520 {lab=VSS}
 N 1040 490 1040 520 {lab=VSS}
 N 1060 260 1060 460 {lab=#net6}
@@ -189,18 +187,23 @@ N 1740 640 1740 690 {lab=#net10}
 N 1570 690 1740 690 {lab=#net10}
 N 1390 -10 1390 10 {lab=BAT}
 N 1680 130 1680 230 {lab=PWRENb}
-N 810 350 820 350 {lab=COMPOUT}
-N 810 110 810 350 {lab=COMPOUT}
 N 720 730 720 760 {lab=CHRGb}
-N 810 350 810 710 {lab=COMPOUT}
-N 810 710 860 710 {lab=COMPOUT}
 N 540 660 550 660 {lab=DISABLEn}
+N 320 120 340 120 {lab=REFOUT}
+N 400 120 630 120 {lab=#net11}
+N 990 350 1120 350 {lab=FILT}
+N 810 350 860 350 {lab=COMPOUT}
+N 810 350 810 450 {lab=COMPOUT}
+N 770 450 810 450 {lab=COMPOUT}
 N 670 180 670 200 {lab=VSS}
 N 630 220 640 220 {lab=#net11}
 N 630 120 630 220 {lab=#net11}
-N 700 220 810 220 {lab=COMPOUT}
-N 320 120 340 120 {lab=REFOUT}
-N 400 120 630 120 {lab=#net11}
+N 700 220 770 220 {lab=OPOUT}
+N 770 110 770 220 {lab=OPOUT}
+N 630 220 630 350 {lab=#net11}
+N 530 350 630 350 {lab=#net11}
+N 530 350 530 460 {lab=#net11}
+N 530 460 630 460 {lab=#net11}
 C {iopin.sym} -110 -10 2 0 {name=p1 lab=VDD}
 C {lab_pin.sym} -80 -10 2 0 {name=p2 sig_type=std_logic lab=VDD}
 C {iopin.sym} -110 20 2 0 {name=p3 lab=VSS}
@@ -222,8 +225,8 @@ C {current_ref.sym} 1010 700 0 0 {name=x2}
 C {lab_pin.sym} 860 670 0 0 {name=p17 sig_type=std_logic lab=VDD}
 C {symbols/nfet_06v0.sym} 570 740 0 0 {name=M1
 L=0.70u
-W=8u
-nf=1
+W=32u
+nf=2
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
@@ -236,8 +239,8 @@ spiceprefix=X
 }
 C {symbols/pfet_06v0.sym} 570 660 0 0 {name=M2
 L=0.55u
-W=8u
-nf=1
+W=32u
+nf=2
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
@@ -442,36 +445,36 @@ model=nfet_06v0
 spiceprefix=X
 }
 C {lab_pin.sym} 860 690 0 0 {name=p18 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 810 110 2 0 {name=p28 sig_type=std_logic lab=COMPOUT}
-C {lab_pin.sym} 950 430 3 0 {name=p33 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 810 110 2 0 {name=p28 sig_type=std_logic lab=OPOUT}
+C {lab_pin.sym} 990 430 3 0 {name=p33 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 980 350 1 0 {name=p36 sig_type=std_logic lab=FILT}
-C {symbols/cap_mim_2f0fF.sym} 950 400 0 0 {name=C1
+C {symbols/cap_mim_2f0fF.sym} 990 400 0 0 {name=C1
 W=5e-5
 L=5e-5
 model=cap_mim_2f0fF
 spiceprefix=X
 m=1}
-C {symbols/ppolyf_u_1k_6p0.sym} 910 350 1 0 {name=R6
+C {symbols/ppolyf_u_1k_6p0.sym} 950 350 1 0 {name=R6
 W=1e-6
 L=1e-4
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
-C {lab_pin.sym} 910 330 1 0 {name=p37 sig_type=std_logic lab=VSS}
-C {symbols/ppolyf_u_1k_6p0.sym} 850 350 1 0 {name=R8
+C {lab_pin.sym} 950 330 1 0 {name=p37 sig_type=std_logic lab=VSS}
+C {symbols/ppolyf_u_1k_6p0.sym} 890 350 1 0 {name=R8
 W=1e-6
 L=1e-4
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
-C {lab_pin.sym} 850 330 1 0 {name=p44 sig_type=std_logic lab=VSS}
-C {symbols/ppolyf_u_1k_6p0.sym} 880 500 2 0 {name=R9
+C {lab_pin.sym} 890 330 1 0 {name=p44 sig_type=std_logic lab=VSS}
+C {symbols/ppolyf_u_1k_6p0.sym} 920 500 2 0 {name=R9
 W=1e-6
 L=1e-4
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
-C {lab_pin.sym} 900 500 2 0 {name=p47 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 940 500 2 0 {name=p47 sig_type=std_logic lab=VSS}
 C {comparator.sym} 1270 360 0 0 {name=x5}
 C {lab_pin.sym} 1160 290 1 0 {name=p45 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1160 430 3 0 {name=p46 sig_type=std_logic lab=VSS}
@@ -645,9 +648,15 @@ C {lab_pin.sym} 1570 760 3 0 {name=p73 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 540 660 0 0 {name=p27 sig_type=std_logic lab=DISABLEn}
 C {lab_pin.sym} 280 500 0 0 {name=p29 sig_type=std_logic lab=CEn}
 C {opamp_weird.sym} 780 110 0 0 {name=x3}
+C {lab_pin.sym} 860 710 0 0 {name=p75 sig_type=std_logic lab=OPOUT}
+C {lab_pin.sym} 670 380 1 0 {name=p76 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 670 520 3 0 {name=p77 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 630 440 0 0 {name=p78 sig_type=std_logic lab=HALFBAT}
+C {comparator.sym} 780 450 0 0 {name=x4}
+C {lab_pin.sym} 810 350 0 0 {name=p80 sig_type=std_logic lab=COMPOUT}
 C {symbols/ppolyf_u_1k_6p0.sym} 670 220 1 0 {name=R7
 W=1e-6
-L=2e-4
+L=3e-4
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
