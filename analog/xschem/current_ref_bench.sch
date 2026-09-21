@@ -11,7 +11,7 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x2=1.2e-05
+x2=1.5e-05
 divx=5
 subdivx=1
 
@@ -38,7 +38,7 @@ x1=2.279138e-07
 color=7
 node=i(v2)
 y2=0
-x2=1.2e-05}
+x2=1.5e-05}
 B 2 950 -130 1540 330 {flags=graph
 ypos1=0
 ypos2=2
@@ -51,13 +51,13 @@ subdivx=1
 unitx=1
 dataset=-1
 x1=2.279138e-07
-color="11 12 4"
+color="11 12 12"
 node="CONTROL
 DISABLE
 x1.curref"
 y2=6
 y1=0
-x2=1.2e-05}
+x2=1.5e-05}
 N -200 60 -200 80 {lab=GND}
 N -200 -30 -200 -0 {lab=VDD}
 N -200 -30 30 -30 {lab=VDD}
@@ -79,7 +79,7 @@ C {devices/code_shown.sym} -850 -170 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
-tran 1n 12u
+tran 1n 15u
 remzerovec
 write current_ref_bench.raw
 .endc
@@ -93,6 +93,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice diode_typical
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.include /foss/designs/charger/xschem/extracted/current_ref_f.spice
 "}
 C {devices/launcher.sym} -105 265 0 0 {name=h1
 descr="Click left mouse button here with control key
@@ -110,15 +111,15 @@ C {vsource.sym} 700 220 0 0 {name=V2 value="5" savecurrent=false}
 C {gnd.sym} 700 270 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} 600 10 1 0 {name=p1 sig_type=std_logic lab=CONTROL}
 C {res.sym} 330 100 0 0 {name=R1
-value=7k
+value=4.7k
 footprint=1206
 device=resistor
 m=1}
 C {gnd.sym} 330 150 0 0 {name=l5 lab=GND}
 C {lab_pin.sym} -200 -30 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {vsource.sym} 30 110 0 0 {name=V3 value="PULSE(0 5 1u 22n 22n 3u 22u 0)" savecurrent=false}
+C {vsource.sym} 30 110 0 0 {name=V3 value="PULSE(0 5 1u 22n 22n 3.5u 22u 0)" savecurrent=false}
 C {gnd.sym} 30 160 0 0 {name=l2 lab=GND}
 C {lab_pin.sym} 30 60 2 0 {name=p3 sig_type=std_logic lab=DISABLE}
 C {power_fet_approx.sym} 640 180 0 0 {name=x2}
-C {current_ref.sym} 180 0 0 0 {name=x1}
 C {lab_pin.sym} 330 50 2 0 {name=p4 sig_type=std_logic lab=PROG}
+C {extracted/current_ref_f.sym} 180 0 0 0 {name=x1}

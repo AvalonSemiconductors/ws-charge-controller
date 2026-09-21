@@ -24,7 +24,7 @@ N 420 530 420 540 {lab=#net1}
 N 420 570 430 570 {lab=VDD}
 N 270 730 280 730 {lab=VSS}
 N 280 730 280 760 {lab=VSS}
-N 230 570 380 570 {lab=#net2}
+N 230 570 380 570 {lab=CEn}
 N 270 700 420 700 {lab=DISABLEn}
 N 420 670 420 700 {lab=DISABLEn}
 N 550 660 550 700 {lab=DISABLEn}
@@ -45,12 +45,12 @@ N 1360 100 1370 100 {lab=VSS}
 N 1370 40 1370 100 {lab=VSS}
 N 1370 100 1370 160 {lab=VSS}
 N -60 360 -60 370 {lab=VSS}
-N -100 300 -100 330 {lab=#net3}
-N -100 300 -60 300 {lab=#net3}
+N -100 300 -100 330 {lab=#net2}
+N -100 300 -60 300 {lab=#net2}
 N -60 360 -50 360 {lab=VSS}
 N -50 330 -50 360 {lab=VSS}
 N -60 330 -50 330 {lab=VSS}
-N -100 240 -100 300 {lab=#net3}
+N -100 240 -100 300 {lab=#net2}
 N -60 240 -50 240 {lab=VDD}
 N -50 210 -50 240 {lab=VDD}
 N -60 210 -50 210 {lab=VDD}
@@ -60,15 +60,15 @@ N 150 200 150 210 {lab=VDD}
 N 150 240 160 240 {lab=VDD}
 N 160 210 160 240 {lab=VDD}
 N 150 210 160 210 {lab=VDD}
-N 110 240 110 270 {lab=#net4}
-N 110 270 150 270 {lab=#net4}
-N 110 270 110 330 {lab=#net4}
+N 110 240 110 270 {lab=#net3}
+N 110 270 150 270 {lab=#net3}
+N 110 270 110 330 {lab=#net3}
 N 150 330 160 330 {lab=VSS}
 N 160 330 160 360 {lab=VSS}
 N 150 360 160 360 {lab=VSS}
 N 150 360 150 370 {lab=VSS}
 N 150 300 230 300 {lab=PD}
-N 90 560 90 580 {lab=#net2}
+N 90 560 90 580 {lab=CEn}
 N 90 490 90 500 {lab=VDD}
 N 90 530 100 530 {lab=VDD}
 N 100 500 100 530 {lab=VDD}
@@ -79,7 +79,7 @@ N 90 640 100 640 {lab=VSS}
 N 90 640 90 650 {lab=VSS}
 N 50 530 50 570 {lab=CE}
 N 50 570 50 610 {lab=CE}
-N 90 570 230 570 {lab=#net2}
+N 90 570 230 570 {lab=CEn}
 N 420 460 420 470 {lab=VDD}
 N 420 500 430 500 {lab=VDD}
 N 430 470 430 500 {lab=VDD}
@@ -94,44 +94,43 @@ N 100 670 100 730 {lab=DISABLE}
 N 100 670 280 670 {lab=DISABLE}
 N 280 500 280 670 {lab=DISABLE}
 N 280 500 380 500 {lab=DISABLE}
-N 230 570 230 730 {lab=#net2}
+N 230 570 230 730 {lab=CEn}
 N 80 730 100 730 {lab=DISABLE}
 N 290 120 300 120 {lab=REFOUT}
 N 1160 730 1220 730 {lab=PROG}
 N 420 610 420 670 {lab=DISABLEn}
 N 270 760 280 760 {lab=VSS}
-N 770 110 810 110 {lab=OPOUT}
 N 300 120 320 120 {lab=REFOUT}
 N 540 -10 1420 -10 {lab=BAT}
 N 990 350 990 370 {lab=FILT}
 N 980 350 990 350 {lab=FILT}
-N 920 350 920 470 {lab=#net5}
+N 920 350 920 470 {lab=#net4}
 N 920 530 940 530 {lab=VSS}
 N 940 500 940 530 {lab=VSS}
 N 1260 360 1290 360 {lab=TRIG}
 N 1040 520 1060 520 {lab=VSS}
 N 1040 490 1040 520 {lab=VSS}
-N 1060 260 1060 460 {lab=#net6}
-N 1060 370 1120 370 {lab=#net6}
+N 1060 260 1060 460 {lab=#net5}
+N 1060 370 1120 370 {lab=#net5}
 N 2040 310 2040 340 {lab=LATCH}
 N 1690 340 2040 340 {lab=LATCH}
 N 1690 340 1690 420 {lab=LATCH}
 N 1690 420 1740 420 {lab=LATCH}
-N 1740 310 1740 360 {lab=#net7}
-N 1740 360 2040 360 {lab=#net7}
-N 2040 360 2040 440 {lab=#net7}
+N 1740 310 1740 360 {lab=#net6}
+N 1740 360 2040 360 {lab=#net6}
+N 2040 360 2040 440 {lab=#net6}
 N 1290 290 1290 360 {lab=TRIG}
 N 1670 440 1740 440 {lab=RESET}
 N 1390 500 1390 530 {lab=VSS}
 N 1390 530 1410 530 {lab=VSS}
-N 1410 430 1410 470 {lab=#net8}
+N 1410 430 1410 470 {lab=#net7}
 N 1390 360 1390 500 {lab=VSS}
-N 1410 390 1410 430 {lab=#net8}
+N 1410 390 1410 430 {lab=#net7}
 N 1410 320 1410 330 {lab=BAT}
 N 1410 270 1410 320 {lab=BAT}
 N 1260 270 1410 270 {lab=BAT}
 N 1260 -10 1260 270 {lab=BAT}
-N 1410 430 1530 430 {lab=#net8}
+N 1410 430 1530 430 {lab=#net7}
 N 1520 450 1530 450 {lab=REFOUT}
 N 1590 190 1600 190 {lab=VDD}
 N 1600 160 1600 190 {lab=VDD}
@@ -146,9 +145,9 @@ N 1590 230 1680 230 {lab=PWRENb}
 N 1680 230 1680 290 {lab=PWRENb}
 N 1680 290 1740 290 {lab=PWRENb}
 N 2120 600 2120 620 {lab=DISABLE}
-N 2040 640 2080 640 {lab=#net9}
-N 2080 640 2080 650 {lab=#net9}
-N 2080 570 2080 640 {lab=#net9}
+N 2040 640 2080 640 {lab=#net8}
+N 2080 640 2080 650 {lab=#net8}
+N 2080 570 2080 640 {lab=#net8}
 N 2120 570 2130 570 {lab=VDD}
 N 2130 540 2130 570 {lab=VDD}
 N 2120 540 2130 540 {lab=VDD}
@@ -175,7 +174,7 @@ N 2180 310 2190 310 {lab=VDD}
 N 2180 450 2190 450 {lab=VSS}
 N 2190 420 2190 450 {lab=VSS}
 N 2180 420 2190 420 {lab=VSS}
-N 1570 680 1570 700 {lab=#net10}
+N 1570 680 1570 700 {lab=#net9}
 N 1570 650 1580 650 {lab=VDD}
 N 1580 620 1580 650 {lab=VDD}
 N 1570 620 1580 620 {lab=VDD}
@@ -183,27 +182,28 @@ N 1570 730 1580 730 {lab=VSS}
 N 1580 730 1580 760 {lab=VSS}
 N 1570 760 1580 760 {lab=VSS}
 N 1530 650 1530 730 {lab=LENb}
-N 1740 640 1740 690 {lab=#net10}
-N 1570 690 1740 690 {lab=#net10}
+N 1740 640 1740 690 {lab=#net9}
+N 1570 690 1740 690 {lab=#net9}
 N 1390 -10 1390 10 {lab=BAT}
 N 1680 130 1680 230 {lab=PWRENb}
 N 720 730 720 760 {lab=CHRGb}
 N 540 660 550 660 {lab=DISABLEn}
 N 320 120 340 120 {lab=REFOUT}
-N 400 120 630 120 {lab=#net11}
+N 400 120 630 120 {lab=#net10}
 N 990 350 1120 350 {lab=FILT}
 N 810 350 860 350 {lab=COMPOUT}
 N 810 350 810 450 {lab=COMPOUT}
 N 770 450 810 450 {lab=COMPOUT}
 N 670 180 670 200 {lab=VSS}
-N 630 220 640 220 {lab=#net11}
-N 630 120 630 220 {lab=#net11}
-N 700 220 770 220 {lab=OPOUT}
-N 770 110 770 220 {lab=OPOUT}
-N 630 220 630 350 {lab=#net11}
-N 530 350 630 350 {lab=#net11}
-N 530 350 530 460 {lab=#net11}
-N 530 460 630 460 {lab=#net11}
+N 630 220 640 220 {lab=#net10}
+N 630 120 630 220 {lab=#net10}
+N 630 220 630 350 {lab=#net10}
+N 530 350 630 350 {lab=#net10}
+N 530 350 530 460 {lab=#net10}
+N 530 460 630 460 {lab=#net10}
+N 770 110 930 110 {lab=OPOUT}
+N 880 110 880 220 {lab=OPOUT}
+N 670 200 850 200 {lab=VSS}
 C {iopin.sym} -110 -10 2 0 {name=p1 lab=VDD}
 C {lab_pin.sym} -80 -10 2 0 {name=p2 sig_type=std_logic lab=VDD}
 C {iopin.sym} -110 20 2 0 {name=p3 lab=VSS}
@@ -445,7 +445,7 @@ model=nfet_06v0
 spiceprefix=X
 }
 C {lab_pin.sym} 860 690 0 0 {name=p18 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 810 110 2 0 {name=p28 sig_type=std_logic lab=OPOUT}
+C {lab_pin.sym} 930 110 2 0 {name=p28 sig_type=std_logic lab=OPOUT}
 C {lab_pin.sym} 990 430 3 0 {name=p33 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 980 350 1 0 {name=p36 sig_type=std_logic lab=FILT}
 C {symbols/cap_mim_2f0fF.sym} 990 400 0 0 {name=C1
@@ -501,7 +501,6 @@ C {lab_pin.sym} 1740 390 0 0 {name=p53 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1740 280 0 0 {name=p54 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1740 410 0 0 {name=p55 sig_type=std_logic lab=VSS}
 C {comparator.sym} 1680 440 0 0 {name=x8}
-C {lab_pin.sym} 1190 710 1 0 {name=p56 sig_type=std_logic lab=CONTROL}
 C {lab_pin.sym} 1570 370 1 0 {name=p57 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1570 510 3 0 {name=p58 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1520 450 0 0 {name=p59 sig_type=std_logic lab=REFOUT}
@@ -646,7 +645,7 @@ spiceprefix=X
 C {lab_pin.sym} 1570 620 1 0 {name=p72 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1570 760 3 0 {name=p73 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 540 660 0 0 {name=p27 sig_type=std_logic lab=DISABLEn}
-C {lab_pin.sym} 280 500 0 0 {name=p29 sig_type=std_logic lab=CEn}
+C {lab_pin.sym} 230 570 1 0 {name=p29 sig_type=std_logic lab=CEn}
 C {opamp_weird.sym} 780 110 0 0 {name=x3}
 C {lab_pin.sym} 860 710 0 0 {name=p75 sig_type=std_logic lab=OPOUT}
 C {lab_pin.sym} 670 380 1 0 {name=p76 sig_type=std_logic lab=VDD}
@@ -656,7 +655,7 @@ C {comparator.sym} 780 450 0 0 {name=x4}
 C {lab_pin.sym} 810 350 0 0 {name=p80 sig_type=std_logic lab=COMPOUT}
 C {symbols/ppolyf_u_1k_6p0.sym} 670 220 1 0 {name=R7
 W=1e-6
-L=3e-4
+L=5.75e-5
 model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
@@ -667,3 +666,21 @@ model=ppolyf_u_1k_6p0
 spiceprefix=X
 m=1}
 C {lab_pin.sym} 370 100 0 0 {name=p74 sig_type=std_logic lab=VSS}
+C {symbols/ppolyf_u_1k_6p0.sym} 730 220 1 0 {name=R15
+W=1e-6
+L=5.75e-5
+model=ppolyf_u_1k_6p0
+spiceprefix=X
+m=1}
+C {symbols/ppolyf_u_1k_6p0.sym} 790 220 1 0 {name=R16
+W=1e-6
+L=5.75e-5
+model=ppolyf_u_1k_6p0
+spiceprefix=X
+m=1}
+C {symbols/ppolyf_u_1k_6p0.sym} 850 220 1 0 {name=R17
+W=1e-6
+L=5.75e-5
+model=ppolyf_u_1k_6p0
+spiceprefix=X
+m=1}

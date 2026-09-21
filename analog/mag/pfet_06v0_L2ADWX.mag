@@ -1,0 +1,127 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1789991615
+<< nwell >>
+rect -700 -1056 700 1056
+<< hvpmos >>
+rect -436 -800 -296 800
+rect -192 -800 -52 800
+rect 52 -800 192 800
+rect 296 -800 436 800
+<< mvpdiff >>
+rect -524 776 -436 800
+rect -524 -776 -511 776
+rect -465 -776 -436 776
+rect -524 -800 -436 -776
+rect -296 776 -192 800
+rect -296 -776 -267 776
+rect -221 -776 -192 776
+rect -296 -800 -192 -776
+rect -52 776 52 800
+rect -52 -776 -23 776
+rect 23 -776 52 776
+rect -52 -800 52 -776
+rect 192 776 296 800
+rect 192 -776 221 776
+rect 267 -776 296 776
+rect 192 -800 296 -776
+rect 436 776 524 800
+rect 436 -776 465 776
+rect 511 -776 524 776
+rect 436 -800 524 -776
+<< mvpdiffc >>
+rect -511 -776 -465 776
+rect -267 -776 -221 776
+rect -23 -776 23 776
+rect 221 -776 267 776
+rect 465 -776 511 776
+<< mvnsubdiff >>
+rect -668 952 668 1024
+rect -668 908 -596 952
+rect -668 -908 -655 908
+rect -609 -908 -596 908
+rect 596 908 668 952
+rect -668 -952 -596 -908
+rect 596 -908 609 908
+rect 655 -908 668 908
+rect 596 -952 668 -908
+rect -668 -1024 668 -952
+<< mvnsubdiffcont >>
+rect -655 -908 -609 908
+rect 609 -908 655 908
+<< polysilicon >>
+rect -436 879 -296 892
+rect -436 833 -423 879
+rect -309 833 -296 879
+rect -436 800 -296 833
+rect -192 879 -52 892
+rect -192 833 -179 879
+rect -65 833 -52 879
+rect -192 800 -52 833
+rect 52 879 192 892
+rect 52 833 65 879
+rect 179 833 192 879
+rect 52 800 192 833
+rect 296 879 436 892
+rect 296 833 309 879
+rect 423 833 436 879
+rect 296 800 436 833
+rect -436 -833 -296 -800
+rect -436 -879 -423 -833
+rect -309 -879 -296 -833
+rect -436 -892 -296 -879
+rect -192 -833 -52 -800
+rect -192 -879 -179 -833
+rect -65 -879 -52 -833
+rect -192 -892 -52 -879
+rect 52 -833 192 -800
+rect 52 -879 65 -833
+rect 179 -879 192 -833
+rect 52 -892 192 -879
+rect 296 -833 436 -800
+rect 296 -879 309 -833
+rect 423 -879 436 -833
+rect 296 -892 436 -879
+<< polycontact >>
+rect -423 833 -309 879
+rect -179 833 -65 879
+rect 65 833 179 879
+rect 309 833 423 879
+rect -423 -879 -309 -833
+rect -179 -879 -65 -833
+rect 65 -879 179 -833
+rect 309 -879 423 -833
+<< metal1 >>
+rect -655 965 655 1011
+rect -655 908 -609 965
+rect 609 908 655 965
+rect -434 833 -423 879
+rect -309 833 -179 879
+rect -65 833 65 879
+rect 179 833 309 879
+rect 423 833 434 879
+rect -511 776 -465 787
+rect -511 -787 -465 -776
+rect -267 776 -221 787
+rect -267 -787 -221 -776
+rect -23 776 23 787
+rect -23 -787 23 -776
+rect 221 776 267 787
+rect 221 -787 267 -776
+rect 465 776 511 787
+rect 465 -787 511 -776
+rect -434 -879 -423 -833
+rect -309 -879 -179 -833
+rect -65 -879 65 -833
+rect 179 -879 309 -833
+rect 423 -879 434 -833
+rect -655 -965 -609 -908
+rect 609 -965 655 -908
+rect -655 -1011 655 -965
+<< properties >>
+string FIXED_BBOX -632 -988 632 988
+string gencell pfet_06v0
+string library gf180mcu
+string parameters w 8.0 l 0.7 m 1 nf 4 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 0 gbc 0 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.55 wmin 0.3 class mosfet full_metal 1 compatible {pfet_03v3 pfet_05v0 pfet_06v0} ad {int((nf+1)/2) * W/nf * 0.18u} as {int((nf+2)/2) * W/nf * 0.18u} pd {2*int((nf+1)/2) * (W/nf + 0.18u)} ps {2*int((nf+2)/2) * (W/nf + 0.18u)} nrd {0.18u / W} nrs {0.18u / W} sa 0 sb 0 sd 0
+<< end >>

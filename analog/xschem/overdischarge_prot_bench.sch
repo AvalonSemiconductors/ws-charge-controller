@@ -66,27 +66,32 @@ N -370 -20 -360 -20 {lab=VDD}
 N -270 10 -260 10 {lab=GND}
 N -270 0 -270 10 {lab=GND}
 N -260 10 -260 30 {lab=GND}
-C {devices/code_shown.sym} -940 -200 0 0 {name=NGSPICE only_toplevel=true
+N 40 10 70 10 {lab=PU}
+N 40 30 70 30 {lab=PD}
+C {devices/code_shown.sym} -1140 -200 0 0 {name=NGSPICE only_toplevel=true
 value="
-.option method=gear
-.param baser=2e-6
-.control
-save all
-tran 1n 10u
-remzerovec
-write overdischarge_prot_bench.raw
-.endc
+.TRAN 1n 10u 0 10n
+.PRINT TRAN FORMAT=raw file=overdischarge_prot_bench.raw v(*) i(*)
+.PREPROCESS REPLACEGROUND TRUE
+.MEASURE TRAN final1 MAX v(PU)
+.MEASURE TRAN final2 MAX v(PD)
+*.control
+*save all
+*tran 1n 10u
+*remzerovec
+*write overdischarge_prot_bench.raw
+*.endc
 "}
 C {devices/code_shown.sym} -1620 160 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include /run/media/veracrypt1/ws-charge-controller/analog/xschem/extracted/overdischarge_prot_f.spice
-.include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
-.lib $::180MCU_MODELS/sm141064.ngspice res_typical
-.lib $::180MCU_MODELS/sm141064.ngspice diode_typical
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
-.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.include $::PDK_ROOT/gf180mcuD/libs.tech/xyce/design.xyce
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce res_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce diode_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce mimcap_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce cap_mim
 "}
 C {devices/launcher.sym} -495 335 0 0 {name=h1
 descr="Click left mouse button here with control key
@@ -100,4 +105,6 @@ C {gnd.sym} -360 150 0 0 {name=l2 lab=GND}
 C {gnd.sym} -290 0 1 0 {name=l1 lab=GND}
 C {lab_pin.sym} 70 -10 0 1 {name=p2 sig_type=std_logic lab=SAFE}
 C {lab_pin.sym} -370 -20 2 1 {name=p1 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 70 10 0 1 {name=p3 sig_type=std_logic lab=PU}
+C {lab_pin.sym} 70 30 0 1 {name=p4 sig_type=std_logic lab=PD}
 C {extracted/overdischarge_prot_f.sym} -100 10 0 0 {name=x1}

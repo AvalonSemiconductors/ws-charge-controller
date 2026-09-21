@@ -20,8 +20,8 @@ y1=-1.5
 color=4
 node=i(v2)
 y2=0
-x1=4.4e-05
-x2=0.000124}
+x1=2e-05
+x2=0.0001}
 B 2 830 -40 1420 420 {flags=graph
 ypos1=0
 ypos2=2
@@ -40,8 +40,8 @@ node="CHRGb
 DONEB
 BAT
 CAP"
-x1=4.4e-05
-x2=0.000124}
+x1=2e-05
+x2=0.0001}
 B 2 -20 -660 570 -200 {flags=graph
 ypos1=0
 ypos2=2
@@ -59,8 +59,8 @@ color="6 8 7"
 node="GATE
 x1.halfbat
 x1.refout"
-x1=4.4e-05
-x2=0.000124}
+x1=2e-05
+x2=0.0001}
 B 2 -20 -1120 570 -660 {flags=graph
 ypos1=0
 ypos2=2
@@ -76,8 +76,8 @@ y1=-0.02
 color=4
 node=i(v1)
 y2=0
-x1=4.4e-05
-x2=0.000124}
+x1=2e-05
+x2=0.0001}
 B 2 830 420 1420 880 {flags=graph
 ypos1=0
 ypos2=2
@@ -93,8 +93,8 @@ y1=0
 y2=5
 color=12
 node=x1.opout
-x1=4.4e-05
-x2=0.000124}
+x1=2e-05
+x2=0.0001}
 N 190 160 190 180 {lab=GND}
 N 170 -60 210 -60 {lab=GND}
 N 190 -80 190 100 {lab=#net1}
@@ -124,7 +124,6 @@ N 170 40 300 40 {lab=GATE}
 N 300 40 450 40 {lab=GATE}
 N -160 -140 -150 -140 {lab=#net7}
 N -90 -140 -80 -140 {lab=GND}
-N -330 -80 -330 170 {lab=GND}
 N -150 -40 -130 -40 {lab=GND}
 N 480 -40 500 -40 {lab=#net5}
 N 480 -40 480 -30 {lab=#net5}
@@ -134,14 +133,18 @@ N 620 80 640 80 {lab=GND}
 N 500 180 540 180 {lab=CAP}
 N 430 180 500 180 {lab=CAP}
 N 430 240 500 240 {lab=GND}
-N -330 170 150 170 {lab=GND}
-N 150 170 190 170 {lab=GND}
+N -270 -60 -270 -20 {lab=#net3}
+N -410 -20 -330 -20 {lab=#net8}
+N -410 -20 -410 20 {lab=#net8}
+N -470 -80 -330 -80 {lab=#net9}
+N -470 -80 -470 20 {lab=#net9}
+N -470 80 -270 80 {lab=GND}
 C {control.sym} 20 0 0 0 {name=x1}
 C {vsource.sym} 190 130 0 0 {name=V1 value="5" savecurrent=false}
 C {gnd.sym} 190 180 0 0 {name=l52 lab=GND}
 C {gnd.sym} 210 -60 3 0 {name=l1 lab=GND}
 C {res.sym} -270 50 0 0 {name=R1
-value=6k
+value=5k
 footprint=1206
 device=resistor
 m=1}
@@ -163,6 +166,7 @@ C {devices/code_shown.sym} -1100 -210 0 0 {name=NGSPICE only_toplevel=true
 value="
 .TRAN 1n 100u 0 10n
 .PRINT TRAN FORMAT=raw file=control_bench.raw v(*) i(*)
+.MEASURE TRAN final1 MAX v(CAP)
 .PREPROCESS REPLACEGROUND TRUE
 *.control
 *save all
@@ -180,7 +184,7 @@ value="
 .lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce diode_typical
 .lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce mimcap_typical
 .lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce cap_mim
-.include /run/media/veracrypt1/ws-charge-controller/analog/xschem/extracted/power_fet_f.spice
+.include /foss/designs/charger/xschem/extracted/power_fet_f.spice
 "}
 C {devices/launcher.sym} -355 265 0 0 {name=h1
 descr="Click left mouse button here with control key
@@ -194,7 +198,7 @@ value=1k
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} -300 -60 1 0 {name=R4
+C {res.sym} -300 -20 1 0 {name=R4
 value=1k
 footprint=1206
 device=resistor
@@ -220,3 +224,5 @@ device=resistor
 m=1}
 C {gnd.sym} -150 -40 1 0 {name=l2 lab=GND}
 C {power_fet_approx.sym} 390 10 0 1 {name=x2}
+C {vsource.sym} -470 50 0 0 {name=V4 value="0" savecurrent=false}
+C {vsource.sym} -410 50 0 0 {name=V5 value="0" savecurrent=false}

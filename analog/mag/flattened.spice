@@ -1,6 +1,6 @@
 * NGSPICE file created from flattened.ext - technology: gf180mcuD
 
-.subckt current_ref_f VDD VSS CTRL DISABLE CONTROL PROG
+.subckt flattened VDD VSS CTRL DISABLE CONTROL PROG
 X0 PROG x1.OUT VDD.t75 VDD.t74 pfet_06v0 ad=0.52p pd=2.52u as=0.52p ps=2.52u w=2u l=1u
 X1 x3.PLUS CTRL VSS.t41 ppolyf_u_1k_6p0 r_width=1u r_length=10u
 X2 x3.OUT a_24139_n3109# CONTROL VSS nfet_06v0 ad=2.08p pd=8.52u as=3.52p ps=16.88u w=8u l=0.7u
