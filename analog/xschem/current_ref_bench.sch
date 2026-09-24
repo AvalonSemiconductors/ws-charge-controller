@@ -66,34 +66,34 @@ N 550 370 550 390 {lab=GND}
 N 550 290 550 310 {lab=#net1}
 N 330 10 600 10 {lab=CONTROL}
 N 700 250 700 270 {lab=GND}
-N 550 130 550 140 {lab=#net2}
-N 550 130 700 130 {lab=#net2}
 N 700 130 700 190 {lab=#net2}
 N 330 130 330 150 {lab=GND}
 N 30 30 30 80 {lab=DISABLE}
 N 30 140 30 160 {lab=GND}
-N 600 10 600 210 {lab=CONTROL}
 N 10 -10 30 -10 {lab=GND}
 N 30 -10 30 10 {lab=GND}
+N 530 130 700 130 {lab=#net2}
+N 530 130 530 150 {lab=#net2}
+N 560 150 600 150 {lab=GND}
+N 500 10 500 220 {lab=CONTROL}
 C {devices/code_shown.sym} -850 -170 0 0 {name=NGSPICE only_toplevel=true
 value="
-.control
-save all
-tran 1n 15u
-remzerovec
-write current_ref_bench.raw
-.endc
+.TRAN 1n 15u 0 10n
+.PRINT TRAN FORMAT=raw file=current_ref_bench.raw v(*) i(*)
+.MEASURE TRAN final1 MIN v(CONTROL)
+.PREPROCESS REPLACEGROUND TRUE
 "}
 C {devices/code_shown.sym} -1250 50 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
-.lib $::180MCU_MODELS/sm141064.ngspice res_typical
-.lib $::180MCU_MODELS/sm141064.ngspice diode_typical
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
-.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.include $::PDK_ROOT/gf180mcuD/libs.tech/xyce/design.xyce
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce res_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce diode_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce mimcap_typical
+.lib $::PDK_ROOT/gf180mcuD/libs.tech/xyce/sm141064.xyce cap_mim
 .include /foss/designs/charger/xschem/extracted/current_ref_f.spice
+.include /foss/designs/charger/xschem/extracted/power_fet_f.spice
 "}
 C {devices/launcher.sym} -105 265 0 0 {name=h1
 descr="Click left mouse button here with control key
@@ -111,7 +111,7 @@ C {vsource.sym} 700 220 0 0 {name=V2 value="5" savecurrent=false}
 C {gnd.sym} 700 270 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} 600 10 1 0 {name=p1 sig_type=std_logic lab=CONTROL}
 C {res.sym} 330 100 0 0 {name=R1
-value=4.7k
+value=11k
 footprint=1206
 device=resistor
 m=1}
@@ -120,6 +120,7 @@ C {lab_pin.sym} -200 -30 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {vsource.sym} 30 110 0 0 {name=V3 value="PULSE(0 5 1u 22n 22n 3.5u 22u 0)" savecurrent=false}
 C {gnd.sym} 30 160 0 0 {name=l2 lab=GND}
 C {lab_pin.sym} 30 60 2 0 {name=p3 sig_type=std_logic lab=DISABLE}
-C {power_fet_approx.sym} 640 180 0 0 {name=x2}
 C {lab_pin.sym} 330 50 2 0 {name=p4 sig_type=std_logic lab=PROG}
 C {extracted/current_ref_f.sym} 180 0 0 0 {name=x1}
+C {extracted/power_fet_f.sym} 550 290 0 0 {name=x2}
+C {gnd.sym} 600 150 0 0 {name=l6 lab=GND}

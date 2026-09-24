@@ -1,6 +1,6 @@
 * NGSPICE file created from flattened.ext - technology: gf180mcuD
 
-.subckt flattened VDD VSS PD PU PWRENb PROG DONEb CHRGb S0 S1 CE LENb BAT GATE
+.subckt control_f VDD VSS PD PU PWRENb PROG DONEb CHRGb S0 S1 CE LENb BAT GATE
 X0 x1.x2.x1.OUT a_8363_282343# VDD.t66 VDD.t65 pfet_06v0 ad=3.52p pd=16.88u as=3.52p ps=16.88u w=8u l=1.1u
 X1 a_33989_250071# CE DISABLE VSS.t11 nfet_06v0 ad=1.96p pd=3.96u as=0.88p ps=4.88u w=2u l=0.7u
 X2 VSS.t47 a_23654_250994# x2.x3.OUT VSS.t48 nfet_06v0 ad=4.16p pd=16.52u as=4.16p ps=16.52u w=16u l=1.4u

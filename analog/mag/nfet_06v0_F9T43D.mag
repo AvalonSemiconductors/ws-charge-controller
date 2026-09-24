@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1788653580
+timestamp 1790179995
 << pwell >>
 rect -334 -1056 334 1056
 << hvnmos >>
@@ -33,23 +33,17 @@ rect -302 -1024 302 -952
 rect -289 -908 -243 908
 rect 243 -908 289 908
 << polysilicon >>
-rect -70 879 70 892
-rect -70 833 -57 879
-rect 57 833 70 879
-rect -70 800 70 833
+rect -70 800 70 844
 rect -70 -833 70 -800
 rect -70 -879 -57 -833
 rect 57 -879 70 -833
 rect -70 -892 70 -879
 << polycontact >>
-rect -57 833 57 879
 rect -57 -879 57 -833
 << metal1 >>
 rect -289 965 289 1011
 rect -289 908 -243 965
 rect 243 908 289 965
-rect -68 833 -57 879
-rect 57 833 68 879
 rect -145 787 -99 798
 rect -145 -798 -99 -787
 rect 99 787 145 798
