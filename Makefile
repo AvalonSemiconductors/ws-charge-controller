@@ -44,7 +44,7 @@ else
 endif
 
 AVAILABLE_SLOTS = 1x1 0p5x1 1x0p5 0p5x0p5
-DEFAULT_SLOT = 1x1
+DEFAULT_SLOT = 1x0p5
 
 # Slot can be any of AVAILABLE_SLOTS
 SLOT ?= $(DEFAULT_SLOT)
@@ -121,15 +121,3 @@ librelane-klayout: clone-pdk defines ## Open the last run in KLayout
 librelane-padring: clone-pdk defines ## Only create the padring
 	python3 scripts/padring.py ${LIBRELANE_CONFIGS} ${LIBRELANE_OPTS}
 .PHONY: librelane-padring
-
-sim: clone-pdk defines ## Run RTL simulation with cocotb
-	cd cocotb; PDK_ROOT=${PDK_ROOT} PDK=${PDK} SLOT=${SLOT} PAD=${PAD} SCL=${SCL} SRAM=${SRAM} python3 chip_top_tb.py
-.PHONY: sim
-
-sim-gl: clone-pdk defines ## Run gate-level simulation with cocotb (after copy-final)
-	cd cocotb; GL=1 PDK_ROOT=${PDK_ROOT} PDK=${PDK} SLOT=${SLOT} PAD=${PAD} SCL=${SCL} SRAM=${SRAM} python3 chip_top_tb.py
-.PHONY: sim-gl
-
-sim-view: ## View simulation waveforms in GTKWave
-	gtkwave cocotb/sim_build/chip_top.fst
-.PHONY: sim-view

@@ -20,8 +20,8 @@ y1=-2
 color=4
 node=i(v2)
 y2=0
-x1=7.7475379e-06
-x2=8.7747539e-05}
+x1=3.7475375e-06
+x2=8.374754e-05}
 B 2 830 -40 1420 420 {flags=graph
 ypos1=0
 ypos2=2
@@ -40,8 +40,8 @@ node="CHRGb
 DONEB
 BAT
 CAP"
-x1=7.7475379e-06
-x2=8.7747539e-05}
+x1=3.7475375e-06
+x2=8.374754e-05}
 B 2 -20 -660 570 -200 {flags=graph
 ypos1=0
 ypos2=2
@@ -59,8 +59,8 @@ color="6 8 7"
 node="GATE
 x1.halfbat
 x1.refout"
-x1=7.7475379e-06
-x2=8.7747539e-05}
+x1=3.7475375e-06
+x2=8.374754e-05}
 B 2 -20 -1120 570 -660 {flags=graph
 ypos1=0
 ypos2=2
@@ -76,8 +76,8 @@ y1=-0.02
 color=4
 node=i(v1)
 y2=0
-x1=7.7475379e-06
-x2=8.7747539e-05}
+x1=3.7475375e-06
+x2=8.374754e-05}
 B 2 1540 -180 2130 280 {flags=graph
 ypos1=0
 ypos2=2
@@ -91,8 +91,8 @@ unitx=1
 dataset=-1
 y1=0
 y2=5
-x1=7.7475379e-06
-x2=8.7747539e-05
+x1=3.7475375e-06
+x2=8.374754e-05
 color=4
 node=PWRENb}
 N 190 160 190 180 {lab=GND}
@@ -164,7 +164,7 @@ C {gnd.sym} 500 250 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} 370 100 2 0 {name=p8 sig_type=std_logic lab=BAT}
 C {devices/code_shown.sym} -1100 -210 0 0 {name=NGSPICE only_toplevel=true
 value="
-.TRAN 1n 150u 0 10n
+.TRAN 1n 15u 0 10n
 .PRINT TRAN FORMAT=raw file=control_bench.raw v(*) i(*)
 .MEASURE TRAN final1 MAX v(CAP)
 .PREPROCESS REPLACEGROUND TRUE

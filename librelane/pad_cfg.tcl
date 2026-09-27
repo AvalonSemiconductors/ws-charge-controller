@@ -146,6 +146,12 @@ foreach side $sides {
     if {[lsearch -exact $vertical_sides $side] >= 0} {
         set cur_pos [expr $cur_pos + $space_side + $::env(PAD_EDGE_SPACING) + $pad_corner_site_height]
     }
+    if {$side == "PAD_EAST"} {
+        set cur_pos [expr $cur_pos + 0.5]
+    }
+    if {$side == "PAD_WEST"} {
+        set cur_pos [expr $cur_pos + 0.5]
+    }
     
     # For all instances
     set counter 0

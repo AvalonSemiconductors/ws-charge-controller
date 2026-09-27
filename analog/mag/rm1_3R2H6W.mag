@@ -1,0 +1,14 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1790350005
+<< metal1 >>
+rect -60 500 60 563
+rect -60 -563 60 -500
+<< rmetal1 >>
+rect -60 -500 60 500
+<< properties >>
+string gencell rm1
+string library gf180mcu
+string parameters w 0.6 l 5.0 m 1 nx 1 wmin 0.23 lmin 0.1 class resistor rho 0.090 val 750.0m dummy 0 dw 0.0 term 0.0 roverlap 0
+<< end >>

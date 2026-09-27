@@ -7,3 +7,7 @@ final/
 img/
 *.lyrdb
 generated_defines.svh
+digital/fixed.mid
+*.class
+digital/runs/
+digital/bench/obj_dir/

@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1790205725
+timestamp 1790449591
 << nwell >>
 rect 7152 -1949 7216 -485
 rect 14152 -1985 14216 -329
@@ -415,11 +415,11 @@ rect 15210 -2857 15216 -2590
 rect 15296 -2857 15302 -2590
 rect 15210 -3317 15302 -2857
 use cap_mim_2p0fF_5BXVCR  cap_mim_2p0fF_5BXVCR_0
-timestamp 1790204866
+timestamp 1790354669
 transform 1 0 15489 0 1 -3737
 box -740 -620 740 620
 use opamp_medium  x1
-timestamp 1790204963
+timestamp 1790380931
 transform 1 0 2676 0 1 -2874
 box 4463 -1139 11508 2577
 use voltage_ref  x2
@@ -427,7 +427,7 @@ timestamp 1788720993
 transform 1 0 -965 0 1 -5349
 box 884 1335 8149 4896
 use opamp_medium  x3
-timestamp 1790204963
+timestamp 1790380931
 transform 1 0 12318 0 1 -2874
 box 4463 -1139 11508 2577
 use pfet_06v0_V34KXH  XM1
@@ -455,19 +455,19 @@ timestamp 1789991736
 transform 0 1 25395 -1 0 -2753
 box -700 -1056 700 1056
 use ppolyf_u_1k_6p0_HD5RNU  XR1
-timestamp 1790124261
+timestamp 1790381546
 transform 0 1 18812 -1 0 -3669
 box -344 -1366 344 1366
 use ppolyf_u_1k_6p0_HD5RNU  XR2
-timestamp 1790124261
+timestamp 1790381546
 transform 0 1 18812 -1 0 -4221
 box -344 -1366 344 1366
 use ppolyf_u_1k_6p0_HD5RNU  XR4
-timestamp 1790124261
+timestamp 1790381546
 transform 1 0 14392 0 1 -3971
 box -344 -1366 344 1366
 use ppolyf_u_1k_6p0_HD5RNU  XR7
-timestamp 1790124261
+timestamp 1790381546
 transform 0 1 15505 -1 0 -2397
 box -344 -1366 344 1366
 << labels >>

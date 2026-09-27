@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1790188178
+timestamp 1790381546
 << nwell >>
 rect 1105 2812 4079 3396
 rect 1105 2128 4110 2812
@@ -616,7 +616,7 @@ rect 6316 1191 6318 1243
 rect 6814 1191 6816 1243
 rect 6316 1172 6816 1191
 use schmitt  schmitt_0
-timestamp 1788354191
+timestamp 1790381546
 transform 1 0 3302 0 1 739
 box 776 -26 2629 2657
 << labels >>
